@@ -20,15 +20,19 @@ jobs:
     - name: Decode and write keystore
       run: echo "${{ secrets.KEYSTORE_FILE }}" | base64 -d > android.keystore
 
+    - name: Create gradle.properties with signing config
+      run: |
+        cat >> gradle.properties << EOF
+        android.injected.signing.store.file=android.keystore
+        android.injected.signing.store.password=${{ secrets.KEYSTORE_PASSWORD }}
+        android.injected.signing.key.alias=${{ secrets.KEY_ALIAS }}
+        android.injected.signing.key.password=${{ secrets.KEY_PASSWORD }}
+        EOF
+
     - name: Make gradlew executable
       run: chmod +x gradlew
 
     - name: Build and sign APK
-      env:
-        KEYSTORE_FILE: android.keystore
-        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-        KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
       run: ./gradlew assembleRelease
 
     - name: Upload APK artifact
