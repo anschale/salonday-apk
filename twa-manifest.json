@@ -1,0 +1,74 @@
+{
+  "packageId": "kr.co.salonday.twa",
+  "host": "salonday.co.kr",
+  "name": "살롱데이",
+  "launcherName": "살롱데이",
+  "display": "standalone",
+  "themeColor": "#F43F5E",
+  "themeColorDark": "#000000",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#FFFFFF",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://salonday.co.kr/img/icon-512.png",
+  "maskableIconUrl": "https://salonday.co.kr/img/icon-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "C:\\Users\\MSI\\Desktop\\android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "살롱 찾기",
+      "shortName": "살롱 찾기",
+      "url": "https://salonday.co.kr/shop/item/salonday_salon.html",
+      "chosenIconUrl": "https://salonday.co.kr/img/icon-192.png"
+    },
+    {
+      "name": "예약 확인",
+      "shortName": "예약 확인",
+      "url": "https://salonday.co.kr/shop/product/salonday_order_history.html",
+      "chosenIconUrl": "https://salonday.co.kr/img/icon-192.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://salonday.co.kr/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {
+    "locationDelegation": {
+      "enabled": true
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://salonday.co.kr/",
+  "minSdkVersion": 21,
+  "shareTarget": {
+    "action": "https://salonday.co.kr/share",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "orientation": "portrait-primary",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "protocolHandlers": [],
+  "fileHandlers": [],
+  "launchHandlerClientMode": "",
+  "displayOverride": [],
+  "appVersion": "1"
+}
